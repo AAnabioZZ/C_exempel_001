@@ -6,23 +6,20 @@ int dogSpeed = 5;
 int frend = 2;
 int time = 0;
 
- while (dist > 10){
-
-    if(frend == 1){
-
-        time = dist/(ffspeed+dogSpeed);
+while (dist > 10)
+{
+    if (frend == 1)
+    {
+        time = dist / (ffspeed + dogSpeed);
         frend = 2;
-
-    }else {
-
-        time = dist/(sfspeed+dogSpeed);
-        frend =1;
-
-    } 
-
-    dist= dist - (ffspeed + sfspeed)*time;
+    }
+    else
+    {
+        time = dist / (sfspeed + dogSpeed);
+        frend = 1;
+    }
+    dist = dist - (ffspeed + sfspeed) * time;
     count++;
-
 }
 
 Console.WriteLine(count);
